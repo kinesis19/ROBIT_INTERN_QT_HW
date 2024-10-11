@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.5)
 
-# 프로젝트 이름과 버전 설정
+# Setting Project name and version
 project(3DOF_robot_arm VERSION 0.1 LANGUAGES CXX)
 
-# C++ 표준 설정
+# Setting C++ standard
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Qt 패키지 찾기 (Qt6 또는 Qt5 지원)
+# Try to find Qt6 first, if not found, try Qt5
 find_package(Qt6 COMPONENTS Widgets QUIET)
 if(Qt6_FOUND)
     set(QT_VERSION_MAJOR 6)
@@ -22,26 +22,26 @@ if(NOT Qt5_FOUND AND NOT Qt6_FOUND)
     message(FATAL_ERROR "Qt5 or Qt6 not found. Please install Qt.")
 endif()
 
-# include 디렉토리 설정
+# Include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include ${CMAKE_BINARY_DIR})
 
-# 프로젝트 소스 파일 정의
+# Source files
 set(SOURCES
     src/main.cpp
     src/mainwindow.cpp
 )
 
-# 헤더 파일 정의
+# Header files
 set(HEADERS
     include/mainwindow.h
 )
 
-# UI 파일 정의
+# UI files
 set(UI_FILES
     ui/mainwindow.ui
 )
 
-# MOC 파일 생성
+# Generate MOC files
 if(QT_VERSION_MAJOR EQUAL 6)
     qt6_wrap_cpp(MOC_SOURCES ${HEADERS})
     qt6_wrap_ui(UIC_SOURCES ${UI_FILES})
@@ -50,17 +50,17 @@ else()
     qt5_wrap_ui(UIC_SOURCES ${UI_FILES})
 endif()
 
-# 실행 파일 생성
+# Add the executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${MOC_SOURCES} ${UIC_SOURCES})
 
-# 적절한 Qt Widgets 라이브러리 링크
+# Link the appropriate Qt Widgets library
 if(QT_VERSION_MAJOR EQUAL 6)
     target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
 else()
     target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 endif()
 
-# 플랫폼별 설정 (필요시 추가)
+# Platform-specific settings
 if(WIN32)
     # Windows-specific settings
 elseif(UNIX)
