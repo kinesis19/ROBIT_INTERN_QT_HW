@@ -75,6 +75,44 @@ void MainWindow::Initializing(){
         ui->btn_b->setText("B\nb");
         ui->btn_n->setText("N\nn");
         ui->btn_m->setText("M\nm");
+
+        ui->btn_lang->setText("영어");
+
+    }else{
+
+        // Special characters
+        ui->btn_lang->setText("Kor");
+
+        // Korean
+        ui->btn_q->setText("ㅂ");
+        ui->btn_w->setText("ㅈ");
+        ui->btn_e->setText("ㄷ");
+        ui->btn_r->setText("ㄱ");
+        ui->btn_t->setText("ㅅ");
+        ui->btn_y->setText("ㅛ");
+        ui->btn_u->setText("ㅕ");
+        ui->btn_i->setText("ㅑ");
+        ui->btn_o->setText("ㅐ\nㅒ");
+        ui->btn_p->setText("ㅔ\nㅖ");
+
+        ui->btn_a->setText("ㅁ");
+        ui->btn_s->setText("ㄴ");
+        ui->btn_d->setText("ㅇ");
+        ui->btn_f->setText("ㄹ");
+        ui->btn_g->setText("ㅎ");
+        ui->btn_h->setText("ㅗ");
+        ui->btn_j->setText("ㅓ");
+        ui->btn_k->setText("ㅏ");
+        ui->btn_l->setText("ㅣ");
+
+        ui->btn_z->setText("ㅋ");
+        ui->btn_x->setText("ㅌ");
+        ui->btn_c->setText("ㅊ");
+        ui->btn_v->setText("ㅍ");
+        ui->btn_b->setText("ㅠ");
+        ui->btn_n->setText("ㅜ");
+        ui->btn_m->setText("ㅡ");
+
     }
 }
 
@@ -435,7 +473,8 @@ void MainWindow::on_btn_space_clicked()
 
 void MainWindow::on_btn_lang_clicked()
 {
-
+    bisEng = !bisEng; // Switch Keyboard Language
+    Initializing();
 }
 
 
