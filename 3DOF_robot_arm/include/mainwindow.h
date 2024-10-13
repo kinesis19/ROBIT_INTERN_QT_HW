@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsScene>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -30,9 +31,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QGraphicsScene *scene;  // Declare QGraphicsScene
 
-    int link1_value, link2_value, link3_value, joint1_angle, joint2_angle, joint3_angle;
-    void Initializing();
-    void generateRobotArm(int value_1, int value_2, int value_3);
+    int link1_value, link2_value, link3_value, joint1_angle, joint2_angle, joint3_angle; // Declare Variables
+    void Initializing(); // Initializing
+    void UpdateScene();  // Update the Robot Arm
+    QPointF CalculateJointPosition(QPointF start, int length, int angle); // Calculate Joint Position using the Link and Angle
 };
 #endif // MAINWINDOW_H
