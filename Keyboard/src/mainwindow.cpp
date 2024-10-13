@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QClipboard>
+#include <QProcess>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -78,12 +80,12 @@ void MainWindow::Initializing(){
         ui->btn_n->setText("N\nn");
         ui->btn_m->setText("M\nm");
 
-        ui->btn_lang->setText("영어");
+        ui->btn_lang->setText("Kor");
 
     } else {
 
         // Special characters
-        ui->btn_lang->setText("Kor");
+        ui->btn_lang->setText("영어");
 
         // Korean
         ui->btn_q->setText("ㅂ");
@@ -123,102 +125,152 @@ void MainWindow::Initializing(){
 
 void MainWindow::on_btn_copy_clicked()
 {
-    ui->plainTextEdit->insertPlainText("`");
+    // Docs: https://doc.qt.io/qt-6/qclipboard.html
+    QClipboard *clipboard = QApplication::clipboard();
+    clipboard->setText(ui->plainTextEdit->toPlainText());
 }
 
 
 void MainWindow::on_btn_clear_clicked()
 {
-
+    ui->plainTextEdit->clear();
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_tilde_clicked()
 {
     ui->plainTextEdit->insertPlainText("`");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_exclamation_clicked()
 {
     ui->plainTextEdit->insertPlainText("1");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_at_clicked()
 {
     ui->plainTextEdit->insertPlainText("2");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_hash_clicked()
 {
     ui->plainTextEdit->insertPlainText("3");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_dollar_clicked()
 {
     ui->plainTextEdit->insertPlainText("4");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_percent_clicked()
 {
     ui->plainTextEdit->insertPlainText("5");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_caret_clicked()
 {
     ui->plainTextEdit->insertPlainText("6");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_ampersand_clicked()
 {
     ui->plainTextEdit->insertPlainText("7");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_asterisk_clicked()
 {
     ui->plainTextEdit->insertPlainText("8");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_leftParenthesis_clicked()
 {
     ui->plainTextEdit->insertPlainText("9");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_rightParenthesis_clicked()
 {
     ui->plainTextEdit->insertPlainText("0");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_minus_clicked()
 {
     ui->plainTextEdit->insertPlainText("-");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_plus_clicked()
 {
     ui->plainTextEdit->insertPlainText("+");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_backSpace_clicked()
 {
+    QTextCursor cursor = ui->plainTextEdit->textCursor();
+    QString currentText = ui->plainTextEdit->toPlainText(); // with '_'
+
+    currentText.remove('_');
+
+    if (!currentText.isEmpty()) {
+        currentText.chop(1);  // Delete last text
+    }
+
+    currentText.append("_");
+
+    ui->plainTextEdit->setPlainText(currentText);
+
+    cursor.movePosition(QTextCursor::End);
+    ui->plainTextEdit->setTextCursor(cursor);
 
 }
 
 
 void MainWindow::on_btn_tab_clicked()
 {
+    // Getting the text from the PlainTextEdit
+    QString currentText = ui->plainTextEdit->toPlainText();
+
+    // Save the current cursor position
+    QTextCursor cursor = ui->plainTextEdit->textCursor();
+    int cursorPosition = cursor.position();
+
+    // Insert the tab in the text
+    currentText.insert(cursorPosition, "    "); // spacing: 4 (or can using the \t)
+
+    // Text Resetting
+    ui->plainTextEdit->setPlainText(currentText);
+
+    // Cursor Position Rese
+    cursor.setPosition(cursorPosition + 1);
+    ui->plainTextEdit->setTextCursor(cursor);
+
+    // Update Cursor
+    ShowCursor();
 
 }
 
@@ -775,7 +827,8 @@ void MainWindow::on_btn_ctrlLeft_clicked()
 
 void MainWindow::on_btn_winLeft_clicked()
 {
-
+    // Find X11 issue -> Using xdotool (with GPT) -> Check feature
+    QProcess::startDetached("xdotool", QStringList() << "key" << "Super_L");
 }
 
 
@@ -800,8 +853,8 @@ void MainWindow::on_btn_lang_clicked()
 
 void MainWindow::on_btn_winRight_clicked()
 {
-
-
+    // Find X11 issue -> Using xdotool (with GPT) -> Check feature
+    QProcess::startDetached("xdotool", QStringList() << "key" << "Super_L");
 }
 
 
@@ -836,7 +889,4 @@ void MainWindow::ShowCursor() {
     ui->plainTextEdit->setTextCursor(cursor);
 
 }
-
-
-
 
