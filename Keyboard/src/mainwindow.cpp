@@ -8,12 +8,76 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     statusBar()->showMessage("©github.com/kinesis19/ROBIT_INTERN_QT_HW/Keyboard");
 
+    bisEng = true;
+    Initializing();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+void MainWindow::Initializing(){
+    if(bisEng == true){
+        // Special characters
+        ui->btn_tilde->setText("~\n`");
+        ui->btn_exclamation->setText("!\n1");
+        ui->btn_at->setText("@\n2");
+        ui->btn_hash->setText("#\n3");
+        ui->btn_dollar->setText("$\n4");
+        ui->btn_percent->setText("%\n5");
+        ui->btn_caret->setText("^\n6");
+        ui->btn_ampersand->setText("&&\n7");
+        ui->btn_asterisk->setText("*\n8");
+        ui->btn_leftParenthesis->setText("(\n9");
+        ui->btn_rightParenthesis->setText(")\n0");
+        ui->btn_minus->setText("_\n-");
+        ui->btn_plus->setText("+\n=");
+
+        ui->btn_leftCurlyBrace->setText("{\n[");
+        ui->btn_rightCurlyBrace->setText("}\n]");
+        ui->btn_backSlash->setText("\\\n|");
+
+        ui->btn_colon->setText(":\n;");
+        ui->btn_doubleQuote->setText("\"\n\'\'");
+
+        ui->btn_lessThan->setText("<\n,");
+        ui->btn_greaterThan->setText(">\n.");
+        ui->btn_questionMark->setText("?\n/");
+
+        // Alphabet
+        ui->btn_q->setText("Q\nq");
+        ui->btn_w->setText("W\nw");
+        ui->btn_e->setText("E\ne");
+        ui->btn_r->setText("R\nr");
+        ui->btn_t->setText("T\nt");
+        ui->btn_y->setText("Y\ny");
+        ui->btn_u->setText("U\nu");
+        ui->btn_i->setText("I\ni");
+        ui->btn_o->setText("O\no");
+        ui->btn_p->setText("P\np");
+
+        ui->btn_a->setText("A\na");
+        ui->btn_s->setText("S\ns");
+        ui->btn_d->setText("D\nd");
+        ui->btn_f->setText("F\nf");
+        ui->btn_g->setText("G\ng");
+        ui->btn_h->setText("H\nh");
+        ui->btn_j->setText("J\nj");
+        ui->btn_k->setText("K\nk");
+        ui->btn_l->setText("L\nl");
+
+        ui->btn_z->setText("Z\nz");
+        ui->btn_x->setText("X\nx");
+        ui->btn_c->setText("C\nc");
+        ui->btn_v->setText("V\nv");
+        ui->btn_b->setText("B\nb");
+        ui->btn_n->setText("N\nn");
+        ui->btn_m->setText("M\nm");
+    }
+}
+
 
 void MainWindow::on_btn_copy_clicked()
 {

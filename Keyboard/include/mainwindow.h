@@ -146,5 +146,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    bool bisEng; // For Changing keyboard layout(text)
+    void Initializing();
+
 };
 #endif // MAINWINDOW_H
