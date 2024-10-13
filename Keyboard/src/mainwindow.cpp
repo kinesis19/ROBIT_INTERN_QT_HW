@@ -841,6 +841,9 @@ void MainWindow::on_btn_altLeft_clicked()
 void MainWindow::on_btn_space_clicked()
 {
 
+    ui->plainTextEdit->insertPlainText(" ");
+
+    ShowCursor();
 }
 
 
