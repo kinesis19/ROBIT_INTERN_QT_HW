@@ -104,7 +104,9 @@ private slots:
 
     void on_btn_enter_clicked();
 
-    void on_btn_shiftLeft_clicked();
+    void on_btn_shiftLeft_pressed();
+
+    void on_btn_shiftLeft_released();
 
     void on_btn_z_clicked();
 
@@ -126,7 +128,7 @@ private slots:
 
     void on_btn_questionMark_clicked();
 
-    void on_btn_shiftRight_clicked();
+    void on_btn_shiftRight_pressed();
 
     void on_btn_ctrlLeft_clicked();
 
@@ -144,10 +146,13 @@ private slots:
 
     void on_btn_ctrlRight_clicked();
 
+    void on_btn_shiftRight_released();
+
+
 private:
     Ui::MainWindow *ui;
 
-    bool bisEng; // For Changing keyboard layout(text)
+    bool bisEng, bisShiftPressed, bisCapsLockOn; // For Changing keyboard layout(text)
     void Initializing();
 
 };

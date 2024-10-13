@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
     statusBar()->showMessage("©github.com/kinesis19/ROBIT_INTERN_QT_HW/Keyboard");
 
     bisEng = true;
+    bisShiftPressed = false;
+    bisCapsLockOn = false;
     Initializing();
 }
 
@@ -19,7 +21,7 @@ MainWindow::~MainWindow()
 
 
 void MainWindow::Initializing(){
-    if(bisEng == true){
+    if(bisEng == true) {
         // Special characters
         ui->btn_tilde->setText("~\n`");
         ui->btn_exclamation->setText("!\n1");
@@ -78,7 +80,7 @@ void MainWindow::Initializing(){
 
         ui->btn_lang->setText("영어");
 
-    }else{
+    } else {
 
         // Special characters
         ui->btn_lang->setText("Kor");
@@ -222,9 +224,17 @@ void MainWindow::on_btn_tab_clicked()
 void MainWindow::on_btn_q_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("q");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("Q");
+        } else {
+            ui->plainTextEdit->insertPlainText("q");
+        }
     } else {
-        ui->plainTextEdit->insertPlainText("ㅂ");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("ㅃ");
+        } else {
+            ui->plainTextEdit->insertPlainText("ㅂ");
+        }
     }
 }
 
@@ -232,20 +242,35 @@ void MainWindow::on_btn_q_clicked()
 void MainWindow::on_btn_w_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("w");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("W");
+        } else {
+            ui->plainTextEdit->insertPlainText("w");
+        }
     } else {
-        ui->plainTextEdit->insertPlainText("ㅈ");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("ㅉ");
+        } else {
+            ui->plainTextEdit->insertPlainText("ㅈ");
+        }
     }
-
 }
 
 
 void MainWindow::on_btn_e_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("e");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("E");
+        } else {
+            ui->plainTextEdit->insertPlainText("e");
+        }
     } else {
-        ui->plainTextEdit->insertPlainText("ㄷ");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("ㄸ");
+        } else {
+            ui->plainTextEdit->insertPlainText("ㄷ");
+        }
     }
 }
 
@@ -253,9 +278,17 @@ void MainWindow::on_btn_e_clicked()
 void MainWindow::on_btn_r_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("r");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("R");
+        } else {
+            ui->plainTextEdit->insertPlainText("r");
+        }
     } else {
-        ui->plainTextEdit->insertPlainText("ㄱ");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("ㄲ");
+        } else {
+            ui->plainTextEdit->insertPlainText("ㄱ");
+        }
     }
 }
 
@@ -263,9 +296,17 @@ void MainWindow::on_btn_r_clicked()
 void MainWindow::on_btn_t_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("t");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("T");
+        } else {
+            ui->plainTextEdit->insertPlainText("t");
+        }
     } else {
-        ui->plainTextEdit->insertPlainText("ㅅ");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("ㅆ");
+        } else {
+            ui->plainTextEdit->insertPlainText("ㅅ");
+        }
     }
 }
 
@@ -273,7 +314,11 @@ void MainWindow::on_btn_t_clicked()
 void MainWindow::on_btn_y_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("y");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("Y");
+        } else {
+            ui->plainTextEdit->insertPlainText("y");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅛ");
     }
@@ -283,7 +328,11 @@ void MainWindow::on_btn_y_clicked()
 void MainWindow::on_btn_u_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("u");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("U");
+        } else {
+            ui->plainTextEdit->insertPlainText("u");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅕ");
     }
@@ -293,33 +342,42 @@ void MainWindow::on_btn_u_clicked()
 void MainWindow::on_btn_i_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("i");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("I");
+        } else {
+            ui->plainTextEdit->insertPlainText("i");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅑ");
     }
-
 }
 
 
 void MainWindow::on_btn_o_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("o");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("O");
+        } else {
+            ui->plainTextEdit->insertPlainText("o");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅐ");
     }
-
 }
 
 
 void MainWindow::on_btn_p_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("p");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("P");
+        } else {
+            ui->plainTextEdit->insertPlainText("p");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅔ");
     }
-
 }
 
 
@@ -343,14 +401,24 @@ void MainWindow::on_btn_backSlash_clicked()
 
 void MainWindow::on_btn_caps_clicked()
 {
+    bisCapsLockOn = !bisCapsLockOn;
 
+    if(bisCapsLockOn == true){
+        ui->btn_caps->setStyleSheet("background-color: lightgray;");
+    }else{
+        ui->btn_caps->setStyleSheet("");
+    }
 }
 
 
 void MainWindow::on_btn_a_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("a");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("A");
+        } else {
+            ui->plainTextEdit->insertPlainText("a");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅁ");
     }
@@ -360,7 +428,11 @@ void MainWindow::on_btn_a_clicked()
 void MainWindow::on_btn_s_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("s");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("S");
+        } else {
+            ui->plainTextEdit->insertPlainText("s");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㄴ");
     }
@@ -370,7 +442,11 @@ void MainWindow::on_btn_s_clicked()
 void MainWindow::on_btn_d_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("d");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("D");
+        } else {
+            ui->plainTextEdit->insertPlainText("d");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅇ");
     }
@@ -380,7 +456,11 @@ void MainWindow::on_btn_d_clicked()
 void MainWindow::on_btn_f_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("f");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("F");
+        } else {
+            ui->plainTextEdit->insertPlainText("f");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㄹ");
     }
@@ -390,7 +470,11 @@ void MainWindow::on_btn_f_clicked()
 void MainWindow::on_btn_g_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("g");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("G");
+        } else {
+            ui->plainTextEdit->insertPlainText("g");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅎ");
     }
@@ -400,7 +484,11 @@ void MainWindow::on_btn_g_clicked()
 void MainWindow::on_btn_h_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("h");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("H");
+        } else {
+            ui->plainTextEdit->insertPlainText("h");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅗ");
     }
@@ -420,7 +508,11 @@ void MainWindow::on_btn_j_clicked()
 void MainWindow::on_btn_k_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("k");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("K");
+        } else {
+            ui->plainTextEdit->insertPlainText("k");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅏ");
     }
@@ -430,7 +522,11 @@ void MainWindow::on_btn_k_clicked()
 void MainWindow::on_btn_l_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("l");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("L");
+        } else {
+            ui->plainTextEdit->insertPlainText("l");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅣ");
     }
@@ -456,16 +552,44 @@ void MainWindow::on_btn_enter_clicked()
 }
 
 
-void MainWindow::on_btn_shiftLeft_clicked()
+void MainWindow::on_btn_shiftLeft_pressed()
 {
+    bisShiftPressed = true;
 
+    if(bisEng == false) {
+        // Korean
+        ui->btn_q->setText("ㅃ");
+        ui->btn_w->setText("ㅉ");
+        ui->btn_e->setText("ㄸ");
+        ui->btn_r->setText("ㄲ");
+        ui->btn_t->setText("ㅆ");
+    }
+}
+
+
+void MainWindow::on_btn_shiftLeft_released()
+{
+    bisShiftPressed = false;
+
+    if(bisEng == false) {
+        // Korean
+        ui->btn_q->setText("ㅂ");
+        ui->btn_w->setText("ㅈ");
+        ui->btn_e->setText("ㄷ");
+        ui->btn_r->setText("ㄱ");
+        ui->btn_t->setText("ㅅ");
+    }
 }
 
 
 void MainWindow::on_btn_z_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("z");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("Z");
+        } else {
+            ui->plainTextEdit->insertPlainText("z");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅋ");
     }
@@ -475,7 +599,11 @@ void MainWindow::on_btn_z_clicked()
 void MainWindow::on_btn_x_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("x");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("X");
+        } else {
+            ui->plainTextEdit->insertPlainText("x");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅌ");
     }
@@ -485,7 +613,11 @@ void MainWindow::on_btn_x_clicked()
 void MainWindow::on_btn_c_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("c");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("C");
+        } else {
+            ui->plainTextEdit->insertPlainText("c");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅊ");
     }
@@ -495,7 +627,11 @@ void MainWindow::on_btn_c_clicked()
 void MainWindow::on_btn_v_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("v");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("V");
+        } else {
+            ui->plainTextEdit->insertPlainText("v");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅍ");
     }
@@ -505,7 +641,11 @@ void MainWindow::on_btn_v_clicked()
 void MainWindow::on_btn_b_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("b");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("B");
+        } else {
+            ui->plainTextEdit->insertPlainText("b");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅠ");
     }
@@ -515,7 +655,11 @@ void MainWindow::on_btn_b_clicked()
 void MainWindow::on_btn_n_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("n");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("N");
+        } else {
+            ui->plainTextEdit->insertPlainText("n");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅜ");
     }
@@ -525,7 +669,11 @@ void MainWindow::on_btn_n_clicked()
 void MainWindow::on_btn_m_clicked()
 {
     if(bisEng) {
-        ui->plainTextEdit->insertPlainText("m");
+        if(bisCapsLockOn == true) {
+            ui->plainTextEdit->insertPlainText("M");
+        } else {
+            ui->plainTextEdit->insertPlainText("m");
+        }
     } else {
         ui->plainTextEdit->insertPlainText("ㅡ");
     }
@@ -550,8 +698,34 @@ void MainWindow::on_btn_questionMark_clicked()
 }
 
 
-void MainWindow::on_btn_shiftRight_clicked()
+void MainWindow::on_btn_shiftRight_pressed()
 {
+    bisShiftPressed = true;
+
+    if(bisEng == false) {
+        // Korean
+        ui->btn_q->setText("ㅃ");
+        ui->btn_w->setText("ㅉ");
+        ui->btn_e->setText("ㄸ");
+        ui->btn_r->setText("ㄲ");
+        ui->btn_t->setText("ㅆ");
+    }
+
+}
+
+
+void MainWindow::on_btn_shiftRight_released()
+{
+    bisShiftPressed = false;
+
+    if(bisEng == false) {
+        // Korean
+        ui->btn_q->setText("ㅂ");
+        ui->btn_w->setText("ㅈ");
+        ui->btn_e->setText("ㄷ");
+        ui->btn_r->setText("ㄱ");
+        ui->btn_t->setText("ㅅ");
+    }
 
 }
 
@@ -604,4 +778,10 @@ void MainWindow::on_btn_ctrlRight_clicked()
 {
 
 }
+
+
+
+
+
+
 
