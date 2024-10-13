@@ -14,11 +14,12 @@ Whenever I have time after submitting the assignment, I will post source code an
 
 ## Execution Result
 ### 3DOF_robot_arm
+
 ![3DOF_robot_arm_img1](/imgs/3DOF_robot_arm_img1.png)
-<center> [Execution Result 1] </center>
+<center> [Execution Result 1] </center><br>
 
 ![3DOF_robot_arm_img2](/imgs/3DOF_robot_arm_img2.png)
-<center> [Execution Result 2] </center>
+<center> [Execution Result 2] </center><br>
 
 ![3DOF_robot_arm_img3](/imgs/3DOF_robot_arm_img3.png)
-<center> [Execution Result 3] </center>
+<center> [Execution Result 3] </center><br>
