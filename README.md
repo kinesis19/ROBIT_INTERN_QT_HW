@@ -23,3 +23,12 @@ Whenever I have time after submitting the assignment, I will post source code an
 
 ![3DOF_robot_arm_img3](/imgs/3DOF_robot_arm_img3.png)
 <center> [Execution Result 3] </center><br>
+
+
+### Keyboard
+
+![Keyboard](/imgs/2.png)
+<center> [Execution Result 1] </center><br>
+
+![Keyboard](/imgs/3.png)
+<center> [Execution Result 2] </center><br>
