@@ -17,12 +17,27 @@ MainWindow::~MainWindow()
 
 // Initializing Variables
 void MainWindow::Initializing(){
+
+    // Initializing Values
     link1_value = 0;
     link2_value = 0;
     link3_value = 0;
     joint1_angle = 0;
     joint2_angle = 0;
     joint3_angle = 0;
+
+    // Initializing UI
+    ui->spinBox_1->setValue(1);
+    ui->spinBox_2->setValue(1);
+    ui->spinBox_3->setValue(1);
+
+    ui->lineEdit_1->setText(QString::number(0));
+    ui->lineEdit_2->setText(QString::number(0));
+    ui->lineEdit_3->setText(QString::number(0));
+
+    ui->horizontalSlider_1->setValue(ui->horizontalSlider_1->minimum());
+    ui->horizontalSlider_2->setValue(ui->horizontalSlider_2->minimum());
+    ui->horizontalSlider_3->setValue(ui->horizontalSlider_3->minimum());
 }
 
 // Handles the click event for generating the robot arm
@@ -61,5 +76,11 @@ void MainWindow::on_horizontalSlider_3_valueChanged(int value)
 
     joint3_angle = ui->horizontalSlider_3->value();
     ui->lineEdit_3->setText(QString::number(MainWindow::joint3_angle));
+}
+
+// Handles the click event for reset
+void MainWindow::on_btn_reset_clicked()
+{
+    Initializing();
 }
 
