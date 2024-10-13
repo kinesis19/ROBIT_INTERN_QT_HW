@@ -119,7 +119,7 @@ void MainWindow::Initializing(){
 
 void MainWindow::on_btn_copy_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("`");
 }
 
 
@@ -131,79 +131,79 @@ void MainWindow::on_btn_clear_clicked()
 
 void MainWindow::on_btn_tilde_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("`");
 }
 
 
 void MainWindow::on_btn_exclamation_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("1");
 }
 
 
 void MainWindow::on_btn_at_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("2");
 }
 
 
 void MainWindow::on_btn_hash_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("3");
 }
 
 
 void MainWindow::on_btn_dollar_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("4");
 }
 
 
 void MainWindow::on_btn_percent_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("5");
 }
 
 
 void MainWindow::on_btn_caret_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("6");
 }
 
 
 void MainWindow::on_btn_ampersand_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("7");
 }
 
 
 void MainWindow::on_btn_asterisk_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("8");
 }
 
 
 void MainWindow::on_btn_leftParenthesis_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("9");
 }
 
 
 void MainWindow::on_btn_rightParenthesis_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("0");
 }
 
 
 void MainWindow::on_btn_minus_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("-");
 }
 
 
 void MainWindow::on_btn_plus_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("+");
 }
 
 
@@ -221,79 +221,123 @@ void MainWindow::on_btn_tab_clicked()
 
 void MainWindow::on_btn_q_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("q");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅂ");
+    }
 }
 
 
 void MainWindow::on_btn_w_clicked()
 {
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("w");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅈ");
+    }
 
 }
 
 
 void MainWindow::on_btn_e_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("e");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㄷ");
+    }
 }
 
 
 void MainWindow::on_btn_r_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("r");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㄱ");
+    }
 }
 
 
 void MainWindow::on_btn_t_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("t");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅅ");
+    }
 }
 
 
 void MainWindow::on_btn_y_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("y");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅛ");
+    }
 }
 
 
 void MainWindow::on_btn_u_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("u");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅕ");
+    }
 }
 
 
 void MainWindow::on_btn_i_clicked()
 {
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("i");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅑ");
+    }
 
 }
 
 
 void MainWindow::on_btn_o_clicked()
 {
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("o");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅐ");
+    }
 
 }
 
 
 void MainWindow::on_btn_p_clicked()
 {
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("p");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅔ");
+    }
 
 }
 
 
 void MainWindow::on_btn_leftCurlyBrace_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("[");
 }
 
 
 void MainWindow::on_btn_rightCurlyBrace_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("]");
 }
 
 
 void MainWindow::on_btn_backSlash_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("\\");
 }
 
 
@@ -305,67 +349,104 @@ void MainWindow::on_btn_caps_clicked()
 
 void MainWindow::on_btn_a_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("a");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅁ");
+    }
 }
 
 
 void MainWindow::on_btn_s_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("s");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㄴ");
+    }
 }
 
 
 void MainWindow::on_btn_d_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("d");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅇ");
+    }
 }
 
 
 void MainWindow::on_btn_f_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("f");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㄹ");
+    }
 }
 
 
 void MainWindow::on_btn_g_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("g");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅎ");
+    }
 }
 
 
 void MainWindow::on_btn_h_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("h");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅗ");
+    }
 }
 
 
 void MainWindow::on_btn_j_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("j");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅓ");
+    }
 }
 
 
 void MainWindow::on_btn_k_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("k");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅏ");
+    }
 }
 
 
 void MainWindow::on_btn_l_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("l");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅣ");
+    }
 }
 
 
 void MainWindow::on_btn_colon_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText(";");
 }
 
 
 void MainWindow::on_btn_doubleQuote_clicked()
 {
 
+    ui->plainTextEdit->insertPlainText("\'");
 }
 
 
@@ -383,61 +464,89 @@ void MainWindow::on_btn_shiftLeft_clicked()
 
 void MainWindow::on_btn_z_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("z");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅋ");
+    }
 }
 
 
 void MainWindow::on_btn_x_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("x");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅌ");
+    }
 }
 
 
 void MainWindow::on_btn_c_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("c");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅊ");
+    }
 }
 
 
 void MainWindow::on_btn_v_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("v");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅍ");
+    }
 }
 
 
 void MainWindow::on_btn_b_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("b");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅠ");
+    }
 }
 
 
 void MainWindow::on_btn_n_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("n");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅜ");
+    }
 }
 
 
 void MainWindow::on_btn_m_clicked()
 {
-
+    if(bisEng) {
+        ui->plainTextEdit->insertPlainText("m");
+    } else {
+        ui->plainTextEdit->insertPlainText("ㅡ");
+    }
 }
 
 
 void MainWindow::on_btn_lessThan_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText(",");
 }
 
 
 void MainWindow::on_btn_greaterThan_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText(".");
 }
 
 
 void MainWindow::on_btn_questionMark_clicked()
 {
-
+    ui->plainTextEdit->insertPlainText("/");
 }
 
 
