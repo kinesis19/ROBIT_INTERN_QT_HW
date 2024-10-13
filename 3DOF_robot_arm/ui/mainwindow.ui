@@ -71,6 +71,9 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
     <property name="maximum">
      <number>100</number>
     </property>
@@ -84,6 +87,9 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
     <property name="maximum">
      <number>100</number>
     </property>
@@ -96,6 +102,9 @@
       <width>160</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
     </property>
     <property name="maximum">
      <number>100</number>
