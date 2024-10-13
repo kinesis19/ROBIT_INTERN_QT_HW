@@ -71,6 +71,9 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSpinBox" name="spinBox_2">
     <property name="geometry">
@@ -81,6 +84,9 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
    </widget>
    <widget class="QSpinBox" name="spinBox_3">
     <property name="geometry">
@@ -90,6 +96,9 @@
       <width>160</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_generate">
@@ -143,6 +152,9 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QSlider" name="horizontalSlider_2">
     <property name="geometry">
@@ -182,6 +194,9 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QSlider" name="horizontalSlider_3">
     <property name="geometry">
@@ -220,6 +235,9 @@
       <width>60</width>
       <height>25</height>
      </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_reset">
