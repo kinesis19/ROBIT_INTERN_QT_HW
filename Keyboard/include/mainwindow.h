@@ -154,6 +154,7 @@ private:
 
     bool bisEng, bisShiftPressed, bisCapsLockOn; // For Changing keyboard layout(text)
     void Initializing();
+    void ShowCursor();
 
 };
 #endif // MAINWINDOW_H

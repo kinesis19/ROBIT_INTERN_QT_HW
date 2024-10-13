@@ -116,6 +116,8 @@ void MainWindow::Initializing(){
         ui->btn_m->setText("ㅡ");
 
     }
+
+    ShowCursor();
 }
 
 
@@ -236,6 +238,7 @@ void MainWindow::on_btn_q_clicked()
             ui->plainTextEdit->insertPlainText("ㅂ");
         }
     }
+    ShowCursor();
 }
 
 
@@ -254,6 +257,7 @@ void MainWindow::on_btn_w_clicked()
             ui->plainTextEdit->insertPlainText("ㅈ");
         }
     }
+    ShowCursor();
 }
 
 
@@ -272,6 +276,7 @@ void MainWindow::on_btn_e_clicked()
             ui->plainTextEdit->insertPlainText("ㄷ");
         }
     }
+    ShowCursor();
 }
 
 
@@ -290,6 +295,7 @@ void MainWindow::on_btn_r_clicked()
             ui->plainTextEdit->insertPlainText("ㄱ");
         }
     }
+    ShowCursor();
 }
 
 
@@ -308,6 +314,7 @@ void MainWindow::on_btn_t_clicked()
             ui->plainTextEdit->insertPlainText("ㅅ");
         }
     }
+    ShowCursor();
 }
 
 
@@ -322,6 +329,7 @@ void MainWindow::on_btn_y_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅛ");
     }
+    ShowCursor();
 }
 
 
@@ -336,6 +344,7 @@ void MainWindow::on_btn_u_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅕ");
     }
+    ShowCursor();
 }
 
 
@@ -350,6 +359,7 @@ void MainWindow::on_btn_i_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅑ");
     }
+    ShowCursor();
 }
 
 
@@ -364,6 +374,7 @@ void MainWindow::on_btn_o_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅐ");
     }
+    ShowCursor();
 }
 
 
@@ -378,24 +389,28 @@ void MainWindow::on_btn_p_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅔ");
     }
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_leftCurlyBrace_clicked()
 {
     ui->plainTextEdit->insertPlainText("[");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_rightCurlyBrace_clicked()
 {
     ui->plainTextEdit->insertPlainText("]");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_backSlash_clicked()
 {
     ui->plainTextEdit->insertPlainText("\\");
+    ShowCursor();
 }
 
 
@@ -408,6 +423,7 @@ void MainWindow::on_btn_caps_clicked()
     }else{
         ui->btn_caps->setStyleSheet("");
     }
+    ShowCursor();
 }
 
 
@@ -422,6 +438,7 @@ void MainWindow::on_btn_a_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅁ");
     }
+    ShowCursor();
 }
 
 
@@ -436,6 +453,7 @@ void MainWindow::on_btn_s_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㄴ");
     }
+    ShowCursor();
 }
 
 
@@ -450,6 +468,7 @@ void MainWindow::on_btn_d_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅇ");
     }
+    ShowCursor();
 }
 
 
@@ -464,6 +483,7 @@ void MainWindow::on_btn_f_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㄹ");
     }
+    ShowCursor();
 }
 
 
@@ -478,6 +498,7 @@ void MainWindow::on_btn_g_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅎ");
     }
+    ShowCursor();
 }
 
 
@@ -492,6 +513,7 @@ void MainWindow::on_btn_h_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅗ");
     }
+    ShowCursor();
 }
 
 
@@ -502,6 +524,7 @@ void MainWindow::on_btn_j_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅓ");
     }
+    ShowCursor();
 }
 
 
@@ -516,6 +539,7 @@ void MainWindow::on_btn_k_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅏ");
     }
+    ShowCursor();
 }
 
 
@@ -530,12 +554,14 @@ void MainWindow::on_btn_l_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅣ");
     }
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_colon_clicked()
 {
     ui->plainTextEdit->insertPlainText(";");
+    ShowCursor();
 }
 
 
@@ -543,6 +569,7 @@ void MainWindow::on_btn_doubleQuote_clicked()
 {
 
     ui->plainTextEdit->insertPlainText("\'");
+    ShowCursor();
 }
 
 
@@ -593,6 +620,7 @@ void MainWindow::on_btn_z_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅋ");
     }
+    ShowCursor();
 }
 
 
@@ -607,6 +635,7 @@ void MainWindow::on_btn_x_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅌ");
     }
+    ShowCursor();
 }
 
 
@@ -621,6 +650,7 @@ void MainWindow::on_btn_c_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅊ");
     }
+    ShowCursor();
 }
 
 
@@ -635,6 +665,7 @@ void MainWindow::on_btn_v_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅍ");
     }
+    ShowCursor();
 }
 
 
@@ -649,6 +680,7 @@ void MainWindow::on_btn_b_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅠ");
     }
+    ShowCursor();
 }
 
 
@@ -663,6 +695,7 @@ void MainWindow::on_btn_n_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅜ");
     }
+    ShowCursor();
 }
 
 
@@ -677,24 +710,28 @@ void MainWindow::on_btn_m_clicked()
     } else {
         ui->plainTextEdit->insertPlainText("ㅡ");
     }
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_lessThan_clicked()
 {
     ui->plainTextEdit->insertPlainText(",");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_greaterThan_clicked()
 {
     ui->plainTextEdit->insertPlainText(".");
+    ShowCursor();
 }
 
 
 void MainWindow::on_btn_questionMark_clicked()
 {
     ui->plainTextEdit->insertPlainText("/");
+    ShowCursor();
 }
 
 
@@ -780,7 +817,25 @@ void MainWindow::on_btn_ctrlRight_clicked()
 }
 
 
+void MainWindow::ShowCursor() {
+    // Get the current text from the plainTextEdit
+    QString currentText = ui->plainTextEdit->toPlainText();
 
+    // Remove any existing cursor ('_') from anywhere in the text
+    currentText.remove('_');
+
+    // Append the cursor only at the end of the text
+    currentText.append("_");
+
+    // Set the updated text back to the plainTextEdit
+    ui->plainTextEdit->setPlainText(currentText);
+
+    // Move the cursor to the end of the text
+    QTextCursor cursor = ui->plainTextEdit->textCursor();
+    cursor.movePosition(QTextCursor::End);
+    ui->plainTextEdit->setTextCursor(cursor);
+
+}
 
 
 
