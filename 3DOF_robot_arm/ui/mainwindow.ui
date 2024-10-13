@@ -139,7 +139,7 @@
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
+   <widget class="QSlider" name="horizontalSlider_1">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -147,6 +147,9 @@
       <width>100</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>360</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -173,6 +176,9 @@
       <width>100</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>360</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
@@ -215,6 +221,9 @@
       <width>100</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>360</number>
     </property>
     <property name="orientation">
      <enum>Qt::Orientation::Horizontal</enum>
