@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>3DOF_robot_arm</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_1">
